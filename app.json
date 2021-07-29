@@ -1,0 +1,109 @@
+{
+  "name": "TGTK",
+  "description": "A Telegram Bot that leeches magnet/torrent links/files from the interent. YT-DL supported for downloading youtube videos. Supports uploading to different cloud providers. ",
+  "keywords": [
+    "telegram","bot","torrent","leech"
+  ],
+  "repository": "https://github.com/reaitten/tgtk",
+  "success_url": "https://github.com/reaitten/tgtk",
+  "website": "https://github.com/reaitten/tgtk",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "BASE_URL_OF_BOT": {
+      "description": "https://appname.herokuapp.com",
+      "value": ""
+    },
+    "AUTH_CHANNEL": {
+      "description": "ALLOWED USERS [ids of user or supergroup] seperate by spaces",
+      "value": ""
+    },
+    "GD_INDEX_URL": {
+      "description": "gdrive index link",
+      "required": false
+    },
+    "EDIT_SLEEP_TIME_OUT": {
+      "description": "Time to wait before edit message",
+      "value": "15",
+      "required": false
+    },
+    "FORCE_DOCUMENTS": {
+      "description": "Should force evething uploaded into Document",
+      "value": "False"
+    },
+    "COMPLETED_STR": {
+      "description": "Character to use as a completed progress",
+      "required": false
+    },
+    "REMAINING_STR": {
+      "description": "Character to use as a incomplete progress",
+      "required": false
+    },
+    "RCLONE_ENABLED": {
+      "description": "Will be enabled once its set",
+      "value": "False"
+    },
+    "RCLONE_CONFIG": {
+      "description": "path to rclone.conf, if you uploaded rclone.conf, it should be at /app/rclone.conf",
+      "value": "/app/rclone.conf",
+      "required": false
+    },
+    "DEF_RCLONE_DRIVE": {
+      "description": "Name of the RCLONE drive from the config",
+      "required": false
+    },
+    "RCLONE_BASE_DIR": {
+      "description": "The base direcory to which the files will be upload if using rclone",
+      "value": "/",
+      "required": false
+    },
+    "MAX_YTPLAYLIST_SIZE": {
+      "description": " Max size of a playlist that is allowed (Number of videos)",
+      "value": "20",
+      "required": false
+    },
+    "MAX_TORRENT_SIZE": {
+      "description": "Max size of the torrent allowed",
+      "value": "10",
+      "required": false
+    },
+    "BOT_CMD_POSTFIX": {
+      "description": "Set this to your bot username if you want to add the username of your bot at the end of the commands like /leech@TorToolkitBot so the value will be @TorToolkitBot",
+      "required": false
+    },
+    "USETTINGS_IN_PRIVATE": {
+      "description": "Allow the user settings to be accessed in private",
+      "value": "False",
+      "required": false
+    },
+    "LEECH_ENABLED": {
+      "description": "Upload to telegram should be enabled or not.",
+      "value": "True",
+      "required": false
+    },
+    "OWNER_ID": {
+      "description": "Used to restrict use of certain stuff to owner only.",
+      "value": "12345678",
+      "required": false
+    } 
+  },
+ "stack": "container",
+ "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "10"
+      }
+    }
+  ]
+}
